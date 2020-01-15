@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timer</title>
+    <!-- Placeholder style, I will remove this later -->
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id="controls-container">
+      <div id="input-wrapper">
+        <span id="input-time-label">Enter the amount of time:</span>
+        <div>
+          <input type="text" id="minutes" placeholder="mm"/>
+          :
+          <input type="text" id="seconds" placeholder="ss"/>
+        </div>
+        <div id="buttons-container">
+          <button onclick="startTimer()">Start</button>
+        </div>
+      </div>
+    </div>
+    <div id="timer-container">
+      <div id="root">
+        <svg id="timer-svg" width="400" height="400">
+          <circle 
+            id="timer-circle"
+            class="timer-circle" 
+            cx="50%" 
+            cy="50%" 
+            r="40%" 
+            pathLength="1" />
+        </svg>
+        <div id="remaining-timer-container">
+          <span id="remaining-time">03:12</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

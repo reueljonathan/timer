@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  color: #fff;
+}
+
+#controls-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+  top: 999px;
+}
+
+#input-wrapper {
+  text-align: center;
+}
+
+#input-wrapper input {
+  background: none;
+  border-width: 0 0 5px 0;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 4em;
+  font-family: "Share Tech Mono";
+  color: #fff;
+}
+
+#input-time-label {
+  display: block;
+  margin-bottom: 1em;
+  font-size: 2em;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#buttons-container {
+  margin-top: 2em;
+}
+
+#buttons-container button {
+  background: none;
+  font-size: 2em;
+  color: #fff;
+  font-family: Ubuntu, sans-serif;
+  padding: 10px;
+  border-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#timer-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+#timer-svg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 999px;
+  opacity: 0;
+
+  transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.timer-circle {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 10px;
+  stroke-dasharray: 100 100;
+  transform-origin: center;
+  transform: rotate(90deg);
+  transition: all 0.3s ease;
+  
+}
+
+#remaining-timer-container {
+  position: absolute;
+  text-align: center;
+  font-size: 5em;
+  width: 300px;
+  height: 100px;
+  /*top: calc(50% - 50px);*/
+  left: calc(50% - 150px);
+
+  display: flex;
+  align-items: center;
+
+  font-family: "Share Tech Mono";
+  transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+  transition-delay: 0.2s;
+  top: 999px;
+  opacity: 0;
+}
+
+#remaining-time {
+  width: 100%;
+  text-align: center;
+}
